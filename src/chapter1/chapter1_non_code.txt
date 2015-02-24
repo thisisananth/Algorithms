@@ -1,0 +1,29 @@
+1. a + b < min(a,b)
+	a= -5
+	b = -3
+	a+b = -8 < min(a,b) which is -5
+	
+2. axb < min(a,b)
+	a=-5
+	b=3
+	axb = -15 < min(a,b) which is -5
+
+3. Suppose the short road has a lower speed limit so it takes more time to reach b from a
+	than through a highway which is longer but faster.
+
+4. Suppose that b is just behind a but there is no direct route except some local lanes. 
+	there is a direct long road without many turns but it is longer than the local lanes.
+
+5. 
+	a.S = {1,3,2} T =5 LTR will be 1+3 = 4 + 2 = 6 not equal to 5 correct subset is {3,2} 
+	b.S = {1,2,3} T =4 smallest to Largest will be 1+2 = 3 + 3 =6 correct subset is {1,3}
+	c.S = {2,3,4} T= 5 largest to smallest will be 4+3 = 7 but correct subset is {2,3}
+	
+6.
+	set cover problem 
+	U = {1,2,3,4,5}
+	S1  = {1,3,6,8,9} S2 = {1,3} S3 = {2,1} S4 = {1,2,5} S5 = {4,3} 
+	
+	The algos solution will be {S1,S4,S5} The best solution will be {S4,S5}
+	
+
