@@ -59,12 +59,52 @@ public class Chapter1 {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(System.currentTimeMillis());
 		
-		System.out.println(divide(2, 1000000));
-		System.out.println(System.currentTimeMillis());
-		System.out.println(divideFast(1000000, 2));
-		System.out.println(System.currentTimeMillis());
+		int start =900;
+		int end = 1000;
+	
+	 int max = 	maxCycle(start, end);
+	 
+	 System.out.println(start + " " + end + " " +max);
+	}
+	
+	
+	public static int maxCycle(int start, int end){
+		
+		int maxCycle = 0;
+		
+		int currentValue = start;
+		
+		while(currentValue<=end){
+			int currentCycle = getCycle(currentValue);
+			if(currentCycle>maxCycle){
+				maxCycle = currentCycle;
+			//	System.out.println("maxValue:"+currentValue);
+			}
+			currentValue++;
+		}
+		
+		// 18 9 28 14 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+		
+		return maxCycle;
+		
+		
+	}
+	
+	public static int getCycle(int num){
+		
+		int cycle = 1;
+		
+		while(num!=1){
+			if(num%2==0){
+				num = num/2;
+				cycle++;
+			}else{
+				num = 3*num+1;
+				cycle++;
+			}
+		}
+		return cycle;
 	}
 
 }
