@@ -1,56 +1,15 @@
-
-
-/*
- * Main.java
- *  java program model for www.programming-challenges.com
- */
-
-import java.io.IOException;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-class Main implements Runnable {
-	static String ReadLn(int maxLength) { // utility function to read from
-											// stdin,
-											// Provided by
-											// Programming-challenges, edit for
-											// style only
-		byte line[] = new byte[maxLength];
-		int length = 0;
-		int input = -1;
-		try {
-			while (length < maxLength) {// Read untill maxlength
-				input = System.in.read();
-				if ((input < 0) || (input == '\n'))
-					break; // or untill end of line ninput
-				line[length++] += input;
-			}
 
-			if ((input < 0) && (length == 0))
-				return null; // eof
-			return new String(line, 0, length);
-		} catch (IOException e) {
-			return null;
-		}
-	}
+public class TheTrip {
 
-	public static void main(String args[]) // entry point from OS
-	{
-		Main myWork = new Main(); // Construct the bootloader
-		myWork.run(); // execute
-	}
-
-	public void run() {
-		new myStuff().run();
-	}
-}
-
-class myStuff implements Runnable {
-	public void run() {
-		// Your program here
-
+	
+	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
 
@@ -86,14 +45,9 @@ class myStuff implements Runnable {
 			e.printStackTrace();
 		}
 
-	
 
 	}
-
-	// You can insert more classes here if you want.
-
-
-	public static int calculateTotalExchange(List<String> expenses){
+public static int calculateTotalExchange(List<String> expenses){
 		
 		long totalCents = 0;
 		int[] centArray = new int[expenses.size()];
@@ -128,6 +82,4 @@ class myStuff implements Runnable {
 			
 		
 		}
-	
-	
 }
