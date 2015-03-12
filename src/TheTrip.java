@@ -62,7 +62,7 @@ public static int calculateTotalExchange(List<String> expenses){
 			totalCents +=cents;
 		}
 		
-		double average = Math.round((double)totalCents/expenses.size()); 
+		double average = Math.round((double)totalCents/expenses.size());
 		
 		
 		int totalTaken = 0;
