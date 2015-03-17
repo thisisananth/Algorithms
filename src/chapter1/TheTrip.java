@@ -1,5 +1,5 @@
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
+package chapter1;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
