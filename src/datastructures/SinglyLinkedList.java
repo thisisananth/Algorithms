@@ -96,4 +96,12 @@ public class SinglyLinkedList {
     public SinglyLinkedList() {
         head = null;
     }
+
+
+
+    public SinglyLinkedList reverse(){
+        SinglyLinkedList returnVal = new SinglyLinkedList();
+        //TODO reverse the list iteratively and recursively.
+        return returnVal;
+    }
 }
