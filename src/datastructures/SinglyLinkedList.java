@@ -6,6 +6,9 @@ package datastructures;
 public class SinglyLinkedList {
 
 
+    public Entry getHead() {
+        return head;
+    }
 
     private Entry head;
     private int size=0;
@@ -39,6 +42,15 @@ public class SinglyLinkedList {
 
     public int getSize(){
         return size;
+    }
+
+    public void display(){
+        Entry e = head;
+
+        while(e!=null){
+            System.out.println(e.getData());
+            e=e.getNext();
+        }
     }
 
     public int remove(int i){
@@ -101,7 +113,28 @@ public class SinglyLinkedList {
 
     public SinglyLinkedList reverse(){
         SinglyLinkedList returnVal = new SinglyLinkedList();
-        //TODO reverse the list iteratively and recursively.
+        //TODO reverse the list iteratively and recursive
+
+        Entry currHead = this.getHead();
+        Entry temp = null;
+        Entry prev = null;
+
+        while(currHead!=null){
+
+            temp = new Entry();
+            temp.setData(currHead.getData());
+            returnVal.head = temp;
+            returnVal.head.setNext(prev);
+            prev = temp;
+            currHead = currHead.getNext();
+
+
+        }
+
         return returnVal;
+
+
+
+
     }
 }
